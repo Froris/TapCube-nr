@@ -46,7 +46,7 @@ export class Timer {
     this.timeoutId = setTimeout(() => {
       startButton.classList.remove("hidden");
       pauseButton.classList.add("hidden");
-      endGameText.innerHTML = `Good job! You've earned ${appData.points} points!`;
+      endGameText.innerHTML = `Good job! You've earned <span class="text__points">${appData.points}</span> points!`;
       // сбросить таймер
       this.resetTimer();
       $("#exampleModal").modal("show");

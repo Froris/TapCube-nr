@@ -15,7 +15,7 @@ $(document).ready(() => {
 });
 
 // Управление паузой/рестартом
-const newTimer = new Timer({ hours: 0, minutes: 0, seconds: 4 });
+const newTimer = new Timer({ hours: 0, minutes: 1, seconds: 0 });
 
 pauseButton.addEventListener("click", () => {
   continueButton.classList.remove("hidden");
@@ -41,7 +41,6 @@ newGameButton.addEventListener("click", () => {
 });
 
 // Начало игры / Рендер кубов
-
 startButton.addEventListener("click", () => {
   startButton.classList.add("hidden");
   pauseButton.classList.remove("hidden");
@@ -54,15 +53,15 @@ startButton.addEventListener("click", () => {
 const saveButton = document.querySelector(".btn.save");
 const closeEndModalButton = document.querySelector(".close-end");
 const input = document.querySelector(".form-control");
-
+// Закрыть окно без сохранения результатов
 closeEndModalButton.addEventListener("click", () => {
   appData.clearPoints();
 });
-
+// Ввод имени игрока
 input.addEventListener("input", (e) => {
   appData.lastPlayer.name = e.target.value;
 });
-
+// Закрыть окно с сохранением результатов
 saveButton.addEventListener("click", () => {
   input.value = "";
   appData.savePlayer();

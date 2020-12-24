@@ -21,7 +21,7 @@ export const appData = {
   },
 
   clearCubes() {
-    this.renderCubes = [];
+    this.renderedCubes = [];
     $(".cubes").remove();
   },
 
