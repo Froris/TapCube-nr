@@ -1,0 +1,26 @@
+.modal-text {
+  font-size: 1.2rem;
+  &.note {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+}
+
+.worning__word {
+  color: red;
+}
+
+.text__points {
+  font-weight: 600;
+  color: cornflowerblue;
+}
+
+.btn.btn-outline-secondary {
+  &:hover {
+    background-color: cornflowerblue;
+  }
+  .save-text {
+    color: white !important;
+  }
+}
